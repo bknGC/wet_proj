@@ -98,7 +98,7 @@ Thredded.parent_mailer = 'ApplicationMailer'
 # Thredded.slugifier = ->(input) { input.parameterize }
 
 # If your forum is in a language other than English, you might want to use the babosa gem instead
-# Thredded.slugifier = ->(input) { Babosa::Identifier.new(input).normalize.transliterate(:russian).to_s }
+Thredded.slugifier = ->(input) { Babosa::Identifier.new(input).normalize.transliterate(:russian).to_s }
 
 # By default, thredded uses integers for record ID route constraints.
 # For integer based IDs (default):
@@ -198,3 +198,5 @@ Rails.application.config.to_prepare do
     end
   end
 end
+
+
